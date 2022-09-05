@@ -111,6 +111,7 @@ git clone https://github.com/Mythrandir89/photobooth-mod "${MOD_ROOT}"
 Info "Nutzerrechte werden angepasst"
 chown -R $WEB_GROUP "${MOD_ROOT}"
 chgrp -R $WEB_GROUP "${MOD_ROOT}"
+chmod -R 775 "${MOD_ROOT}"
 #TODO
 
 # BACKUP MOD Dir

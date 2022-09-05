@@ -1,2 +1,2 @@
 <?php
-echo "Die Mod ist aktiv!";
+include "src/header.php";
