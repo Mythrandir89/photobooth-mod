@@ -6,7 +6,7 @@ PHOTOBOOTH_PATH=(
 	'/var/www/html'
 	'/var/www/html/photobooth'
 )
-MOD_FOLDER="mod"
+MOD_FOLDER="photobooth-mod"
 WEB_GROUP="www-data"
 LOGLEVEL=3
 
