@@ -6,7 +6,7 @@ PHOTOBOOTH_PATH=(
 	'/var/www/html'
 	'/var/www/html/photobooth'
 )
-MOD_FOLDER="photobooth-mod"
+MOD_FOLDER="photomod"
 WEB_GROUP="www-data"
 LOGLEVEL=3
 
@@ -17,7 +17,7 @@ function Info {
 	if [ $LOGLEVEL -gt 1 ]; then
 		COL='\033[1;33m'
 		NC='\033[0m'
-		printf "${COL}[INFO]\t\t${NC} ${1}\n"
+		printf "%s[NOTICE]\t\t%s %s\n" "${COL}" "${NC}" "${1}"
 	fi
 }
 
@@ -25,7 +25,7 @@ function Success {
 	if [ $LOGLEVEL -gt 2 ]; then
 		COL='\033[1;32m'
 		NC='\033[0m'
-		printf "${COL}[SUCCESS]\t${NC} ${1}\n"
+		printf "%s[SUCCESS]\t\t%s %s\n" "${COL}" "${NC}" "${1}"
 	fi
 }
 
@@ -33,8 +33,12 @@ function Error {
 	if [ $LOGLEVEL -gt 0 ]; then
 		COL='\033[0;31m'
 		NC='\033[0m'
-		printf "${COL}[ERROR]\t\t${NC} ${1}\n"
+		printf "%s[ERROR]\t\t%s %s\n" "${COL}" "${NC}" "${1}"
 	fi
+}
+
+function installBooth {
+  true;
 }
 ###############
 ## CODE
